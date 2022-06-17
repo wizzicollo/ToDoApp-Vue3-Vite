@@ -8,7 +8,7 @@ const input_content = ref('')
 const input_category = ref(null)
 
 const todos_asc = computed(() => todos.value.sort((a, b) => {
-  return b.createdAt - a.createdAt
+  return a.createdAt - b.createdAt
 }))
 
 const addTodo = () => {
@@ -52,9 +52,7 @@ onMounted(() => {
 
   <section class="greeting">
      <h2 class="title">
-      What's up, Hello User <input type="text"
-      placeholder="Name here" 
-      v-model="name" />
+      Hello, Welcome <input type="text" placeholder="write your name here" v-model="name" />
      </h2>
   </section>
 
